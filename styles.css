@@ -271,13 +271,18 @@ footer a:hover {
     }
 
     .hero{
-        height: 50dvh;
+        height: 30dvh;
     }
     .content-container {
         flex-direction: column;
         max-width: 100dvw;
         padding: 10px;
+        
     }
+    #about .content-container {
+        flex-direction: column-reverse;
+    }
+
     .contact-item{
         width: 100%;
     }
