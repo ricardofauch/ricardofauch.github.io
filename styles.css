@@ -1,0 +1,230 @@
+/* styles.css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  } 
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+}
+
+nav {
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px); /* Adds a blur effect */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.5) 100%);
+    
+}
+
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    min-height: 10rem;
+}
+
+
+.hero{
+    width: 100%;
+}
+
+.hero-text-container {
+    position: absolute;
+    font-size: 5rem;
+    top: 20%;
+    padding-left: 10vw;
+    width: fit-content;  /* Fit to the size of the text */
+    overflow: hidden;
+}
+
+.hero-text-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;  /* Extend slightly around the text */
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: inherit;  /* Inherit the background from the parent */
+    filter: blur(8px);  /* Adjust the blur intensity as needed */
+    z-index: -1;  /* Ensure the blur is behind the text */
+}
+
+.herotext {
+    position: relative;
+    color: transparent;
+    font-size: 10rem;
+    -webkit-text-stroke: 1px #f0f0f0;
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+    background: none;
+    z-index: 1;  /* Make sure the text is above the pseudo-element */
+}
+
+#about .content-container {
+    display: flex;
+    align-items: center; /* Centers the items vertically */
+    justify-content: left; /* Space between the image and text */
+    max-width: fit-content; /* Sets a max-width for the container */
+    margin: auto; /* Centers the container horizontally */
+}
+
+#about img {
+    flex: 1; /* Gives the image flexible width */
+    max-width: 40%; /* Limits image width to 40% of the container */
+    margin-right: 20px; /* Adds space between the image and the text */
+}
+
+#about .text-content {
+    flex: 2; /* Allows the text content to take up twice the space of the image */
+    padding: 20px; /* Adds padding inside the text container */
+    max-width: 30dvw;
+    margin-left: 10dvw;
+}
+
+#tours .content-container {
+    display: flex;
+    align-items: center; /* Centers the items vertically */
+    justify-content: right; /* Space between the text and image */
+    padding: 0px; /* Adds some padding around the content */
+    max-width: fit-content; /* Sets a max-width for the container */
+    margin: auto; /* Centers the container horizontally */
+}
+
+#tours .text-content {
+    flex: 2; /* Allows the text content to take up twice the space of the image */
+    padding: 30px; /* Adds padding inside the text container */
+    order: 1; /* Ensures the text appears on the left */
+    max-width: 30dvw;
+}
+
+#tours img {
+    flex: 1; /* Gives the image flexible width */
+    max-width: 60%; /* Limits image width to 40% of the container */
+    margin-left: 20px; /* Adds space between the text and the image */
+    order: 2; /* Ensures the image appears on the right */
+}
+
+#tours{
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally in the cross-axis */
+    justify-content: center; /* Centers children vertically in the main-axis */
+    background-color: rgb(225, 196, 150);
+    
+}
+
+#contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4; /* Light grey background for the section */
+}
+
+#contact h2 {
+    font-size: 2.5rem; /* Large text for the call to action */
+    margin-bottom: 20px; /* Space below the headline */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around; /* Space out the contact items */
+    align-items: center; /* Align items vertically */
+}
+
+.contact-item {
+    width: 30%; /* Set each column to take up one-third of the container width */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact-item i {
+    font-size: 2rem; /* Large icons */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.contact-item p {
+    font-size: 1.2rem; /* Larger text size for readability */
+    line-height: 1.4; /* Increase line height for better readability */
+}
+
+.contact-item strong {
+    display: block; /* Make the bold text appear on its own line */
+    margin-bottom: 5px; /* Space below the bold text */
+}
+
+footer {
+    position: static;
+    background-color: #343a40; /* Dark grey background */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Padding above and below the content */
+    text-align: center; /* Center-align text */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center all child items horizontally */
+    align-items: center; /* Center all child items vertically */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+}
+
+footer p {
+    margin: 10px 20px; /* Add some margin for spacing */
+}
+
+footer nav {
+    margin: 10px 20px; /* Add some margin for spacing */
+    position: static;
+    background: transparent;
+}
+
+footer ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove default margin */
+}
+
+footer ul li {
+    margin: 0 10px; /* Spacing between list items */
+}
+
+footer a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    color: #c0c0c0; /* Light grey color on hover */
+}
