@@ -55,8 +55,8 @@ nav a {
 
 section {
     min-height: 10rem;
+    padding: 0%;
 }
-
 
 .hero{
     width: 100%;
@@ -87,20 +87,20 @@ section {
     align-items: center; /* Centers the items vertically */
     justify-content: left; /* Space between the image and text */
     max-width: fit-content; /* Sets a max-width for the container */
-    margin: auto; /* Centers the container horizontally */
+    margin-top: 0px;
+    padding: 0px;
 }
 
 #about img {
     flex: 1; /* Gives the image flexible width */
     max-width: 40%; /* Limits image width to 40% of the container */
-    margin-right: 20px; /* Adds space between the image and the text */
 }
 
 #about .text-content {
     flex: 2; /* Allows the text content to take up twice the space of the image */
-    padding: 20px; /* Adds padding inside the text container */
+    padding: 30px; /* Adds padding inside the text container */
+    order: 1; /* Ensures the text appears on the left */
     max-width: 30dvw;
-    margin-left: 10dvw;
 }
 
 #tours .content-container {
@@ -122,7 +122,6 @@ section {
 #tours img {
     flex: 1; /* Gives the image flexible width */
     max-width: 60%; /* Limits image width to 40% of the container */
-    margin-left: 20px; /* Adds space between the text and the image */
     order: 2; /* Ensures the image appears on the right */
 }
 
@@ -218,8 +217,12 @@ footer a:hover {
 
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
+    html{
+        max-width: 100dvw;
+    }
+
     body{
-        
+        max-width: 100dvw;
     }
 
     nav {
@@ -243,17 +246,16 @@ footer a:hover {
         position: absolute;
         top: 10%;
         padding-left: 10vw;
-        width: 400%;  /* Fit to the size of the text */
         height: 100dvh;
         overflow: hidden;
     }
 
     #about img, #tours img {
-        max-width: 100%; /* Full width on smaller screens */
+        max-width: 100dvw; /* Full width on smaller screens */
     }
 
     #about .text-content, #tours .text-content {
-        padding: 10px;
+        padding: 40px;
         max-width: 100%;
         order: 1;
     }
@@ -270,4 +272,13 @@ footer a:hover {
     .hero{
         height: 50dvh;
     }
+    .content-container {
+        flex-direction: column;
+        max-width: 100dvw;
+        padding: 10px;
+    }
+    .contact-item{
+        width: 100%;
+    }
+    
 }
