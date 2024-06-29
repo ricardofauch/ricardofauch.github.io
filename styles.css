@@ -273,7 +273,7 @@ footer a:hover {
 
     #about img, #tours img {
         width: 100%; 
-        height: 100%; 
+        height: 45dvh; 
     }
 
     #about .text-content, #tours .text-content {
