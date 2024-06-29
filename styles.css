@@ -273,6 +273,7 @@ footer a:hover {
 
     #about img, #tours img {
         max-width: 100dvw; /* Full width on smaller screens */
+        object-fit: cover;
     }
 
     #about .text-content, #tours .text-content {
