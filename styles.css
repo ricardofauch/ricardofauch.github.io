@@ -54,7 +54,6 @@ nav a {
 }
 
 section {
-    min-height: 10rem;
     padding: 0%;
 }
 
@@ -81,6 +80,27 @@ section {
     text-shadow: #333 9px;
     z-index: 1;  /* Make sure the text is above the pseudo-element */
     font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+}
+
+.avicontainer{
+    display: none;
+    flex-direction: column;
+    align-items: center; /* Centers the items vertically */
+    justify-content: center; /* Space between the image and text */
+    max-width: fit-content; /* Sets a max-width for the container */
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.circular-image {
+    display: block;
+    width: 120px; /* or any size you want */
+    height: 120px; /* same as width to maintain aspect ratio */
+    border-radius: 50%; /* creates the circular shape */
+    border: 10px black;
+    object-fit: fill; /* ensures the image covers the space without distorting */
+    margin: 20px auto 20px; /* centers the image horizontally and adds spacing below */
+    overflow: hidden; /* hides anything outside the circular area */
 }
 
 #about .content-container {
@@ -259,6 +279,18 @@ footer a:hover {
         padding: 40px;
         max-width: 100%;
         order: 1;
+    }
+
+    #about {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .avicontainer{
+        display: flex;
     }
 
     #tours img {
